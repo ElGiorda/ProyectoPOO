@@ -21,6 +21,7 @@ private:
 	Font font;
 	Text menu[3];
 	
+	
 	Music menu_soundtrack;
 	bool mute;
 	
