@@ -22,7 +22,6 @@ public:
 	
 private:
 	Font g_font;
-	Text g_text;
 	
 	Clock g_clock;
 	

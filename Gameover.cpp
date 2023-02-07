@@ -10,37 +10,31 @@ Gameover::Gameover(int p, int ek) {
 	g_puntos = p;
 	g_enemy_k = ek;
 	
-	g_text.setFont(g_font);
-	g_text.setCharacterSize(20);
-	g_text.setString("Game Over");
-	g_text.setFillColor(sf::Color::Red);
-	g_text.setPosition(sf::Vector2f(300, 100));
-	
 	T_a.setString(a);
 	T_a.setFont(g_font);
 	T_a.setFillColor(Color::Black);
 	T_a.setOutlineColor(Color::White);
 	T_a.setOutlineThickness(2);
-	T_a.setPosition(225,250);
+	T_a.setPosition(430,350);
 	
 	T_b.setString(b);
 	T_b.setFont(g_font);
 	T_b.setFillColor(Color::Black);
 	T_b.setOutlineColor(Color::White);
 	T_b.setOutlineThickness(2);
-	T_b.setPosition(250,250);
+	T_b.setPosition(455,350);
 	
 	T_c.setString(c);
 	T_c.setFont(g_font);
 	T_c.setFillColor(Color::Black);
 	T_c.setOutlineColor(Color::White);
 	T_c.setOutlineThickness(2);
-	T_c.setPosition(275,250);
+	T_c.setPosition(480,350);
 	
-	m_Background_t.loadFromFile("menu.jpg");
+	m_Background_t.loadFromFile("gameoover.jpg");
 	m_Background.setTexture(m_Background_t);
 	m_Background.setPosition(Vector2f(0,0));
-	m_Background.scale(0.7,0.7);
+	m_Background.scale(0.5,0.5);
 	
 }
 //
@@ -67,7 +61,6 @@ void Gameover :: update(SceneManager &sm){
 void Gameover::draw(RenderWindow& w){
 	//w.clear(Color(0,0,0,255));
 	w.draw(m_Background);
-	w.draw(g_text);
 	
 	int seconds = g_clock.getElapsedTime().asSeconds()*3;
 	

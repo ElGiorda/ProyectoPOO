@@ -188,7 +188,7 @@ void Jugador :: limites_pantalla(){
 //
 void Jugador :: cambiar_mejora_disp (bool x){
 	if(x){
-		if (v_atk <= 80){
+		if (v_atk >= 80){
 			v_atk *= 0.85;
 		}
 	}
